@@ -1,0 +1,22 @@
+---- Guide of the source codes -----
+---- @fengfu-chris 2015-6-1 --------
+
+1. installation requirement
+  -> g++ compiler
+  -> C++ MPI library (eg. openMPI)
+  -> linux / Mac OS platform
+
+2. compile and link
+  $sh make.sh
+
+3. demo of matrix multiply (single processor)
+  $./mm_single_proc 2000 1000 3000
+
+4. demo of matrix multiply (parallel)
+  $mpirun -np 3 mm_MPI 2000 1000 3000
+
+  or
+  $mpirun -np 3 mm_MPI_update 2000 1000 3000
+
+  or
+  $mpirun -np 3 mm_MPI_SCMatrix 2000 1000 3000
